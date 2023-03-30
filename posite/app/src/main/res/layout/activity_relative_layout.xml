@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+    </data>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context=".chapter1.RelativeLayoutActivity">
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/center_btn"
+            android:layout_width="70sp"
+            android:layout_height="70sp"
+            android:layout_centerInParent="true"
+            android:background="@drawable/round_pink"
+            android:text="중앙!!"
+            android:textColor="@color/black"
+            android:textSize="20sp" />
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/center_horizontal_btn"
+            android:layout_width="150sp"
+            android:layout_height="50sp"
+            android:layout_centerHorizontal="true"
+            android:background="@drawable/round_green"
+            android:text="수평 중앙!!"
+            android:textColor="@color/black"
+            android:textSize="20sp" />
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/center_vertical_btn"
+            android:layout_width="100sp"
+            android:layout_height="50sp"
+            android:textSize="20sp"
+            android:textColor="@color/black"
+            android:background="@drawable/round_green"
+            android:layout_centerVertical="true"
+            android:text="수평 중앙!!"/>
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/left_btn"
+            android:layout_width="130sp"
+            android:layout_height="50sp"
+            android:textSize="20sp"
+            android:textColor="@color/black"
+            android:background="@drawable/round_green"
+            android:layout_toLeftOf="@id/center_btn"
+            android:layout_above="@id/center_btn"
+            android:text="중앙 왼쪽 위"/>
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/right_btn"
+            android:layout_width="150sp"
+            android:layout_height="50sp"
+            android:textSize="20sp"
+            android:textColor="@color/black"
+            android:background="@drawable/round_green"
+            android:layout_toRightOf="@id/center_btn"
+            android:layout_below="@id/center_btn"
+            android:text="중앙 오른쪽 아래"/>
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/back_btn"
+            android:layout_width="90sp"
+            android:layout_height="50sp"
+            android:textSize="20sp"
+            android:textColor="@color/black"
+            android:background="@drawable/round_blue"
+            android:layout_toRightOf="@id/center_btn"
+            android:layout_centerVertical="true"
+            android:text="뒤로 가기"/>
+
+    </RelativeLayout>
+</layout>
