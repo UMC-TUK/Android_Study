@@ -23,34 +23,18 @@
             android:layout_weight="1">
 
             <androidx.appcompat.widget.AppCompatButton
-                android:id="@+id/button"
+                android:id="@+id/constraint_btn"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:background="@drawable/round_pink"
-                android:text="1번!!"
+                android:background="@drawable/round_green"
+                android:fontFamily="@font/ibm_semibold"
+                android:text="ConstraintLayout"
+                android:textSize="20sp"
                 app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent" />
 
-            <androidx.appcompat.widget.AppCompatButton
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:background="@drawable/round_pink"
-                android:text="ConstraintLayout"
-                app:layout_constraintBottom_toBottomOf="parent"
-                app:layout_constraintEnd_toStartOf="@+id/button2"
-                app:layout_constraintStart_toEndOf="@+id/button"
-                app:layout_constraintTop_toTopOf="parent" />
-
-            <androidx.appcompat.widget.AppCompatButton
-                android:id="@+id/button2"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:background="@drawable/round_pink"
-                android:text="2번!!"
-                app:layout_constraintBottom_toBottomOf="parent"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintTop_toTopOf="parent" />
 
         </androidx.constraintlayout.widget.ConstraintLayout>
 
@@ -61,23 +45,15 @@
             android:gravity="center"
             android:orientation="horizontal">
 
-            <androidx.appcompat.widget.AppCompatButton
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:background="@drawable/round_pink"
-                android:text="1번!!" />
 
             <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/linear_btn"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:background="@drawable/round_pink"
-                android:text="LinearLayout(horizontal)" />
-
-            <androidx.appcompat.widget.AppCompatButton
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:background="@drawable/round_pink"
-                android:text="2번!!" />
+                android:background="@drawable/round_green"
+                android:fontFamily="@font/ibm_semibold"
+                android:text="LinearLayout"
+                android:textSize="20sp" />
 
         </LinearLayout>
 
@@ -87,83 +63,49 @@
             android:layout_weight="1">
 
             <androidx.appcompat.widget.AppCompatButton
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:background="@drawable/round_pink"
-                android:text="1번!!" />
-
-            <androidx.appcompat.widget.AppCompatButton
-                android:layout_width="wrap_content"
-                android:layout_height="match_parent"
-                android:background="@drawable/round_pink"
-                android:text="2번!!" />
-
-            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/frame_btn"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:background="@drawable/round_pink"
-                android:text="FrameLayout" />
+                android:background="@drawable/round_green"
+                android:fontFamily="@font/ibm_semibold"
+                android:text="FrameLayout"
+                android:textSize="20sp" />
 
         </FrameLayout>
 
         <TableLayout
             android:layout_width="match_parent"
             android:layout_height="0dp"
-            android:layout_weight="0.5"
-            android:stretchColumns="*">
+            android:layout_weight="0.5">
 
             <TableRow>
 
-                <androidx.appcompat.widget.AppCompatButton
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:background="@drawable/round_pink"
-                    android:text="1번!!" />
 
                 <androidx.appcompat.widget.AppCompatButton
+                    android:id="@+id/table_btn1"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:background="@drawable/round_pink"
-                    android:text="TableLayout" />
+                    android:background="@drawable/round_green"
+                    android:fontFamily="@font/ibm_semibold"
+                    android:text="Table"
+                    android:textSize="20sp" />
+
 
                 <androidx.appcompat.widget.AppCompatButton
+                    android:id="@+id/table_btn2"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:background="@drawable/round_pink"
-                    android:text="2번!!" />
+                    android:background="@drawable/round_green"
+                    android:fontFamily="@font/ibm_semibold"
+                    android:text="Layout"
+                    android:textSize="20sp" />
+
+
             </TableRow>
 
 
         </TableLayout>
 
-        <TableLayout
-            android:layout_width="match_parent"
-            android:layout_height="0dp"
-            android:layout_weight="0.5"
-            android:stretchColumns="*">
-
-            <TableRow>
-
-                <androidx.appcompat.widget.AppCompatButton
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:background="@drawable/round_pink"
-                    android:text="1번!!" />
-
-                <androidx.appcompat.widget.AppCompatButton
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:background="@drawable/round_pink"
-                    android:text="2번!!" />
-
-                <androidx.appcompat.widget.AppCompatButton
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:background="@drawable/round_pink"
-                    android:text="3번!!" />
-            </TableRow>
-
-        </TableLayout>
 
         <GridLayout
             android:layout_width="wrap_content"
@@ -181,41 +123,57 @@
                 android:layout_columnSpan="1"
                 android:layout_gravity="fill_vertical"
                 android:background="@drawable/round_pink"
-                android:text="1번!!" />
+                android:fontFamily="@font/ibm_semibold"
+                android:text="1번!!"
+                android:textSize="20sp"
+                android:visibility="invisible" />
 
             <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/grid_btn1"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:background="@drawable/round_pink"
+                android:background="@drawable/round_green"
+                android:fontFamily="@font/ibm_semibold"
                 android:text="Grid" />
 
             <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/grid_btn2"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:background="@drawable/round_pink"
+                android:background="@drawable/round_green"
+                android:fontFamily="@font/ibm_semibold"
                 android:text="Layout" />
 
             <androidx.appcompat.widget.AppCompatButton
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-
-                android:background="@drawable/round_pink"
                 android:layout_gravity="fill"
-                android:text="3번!!" />
+                android:background="@drawable/round_green"
+                android:fontFamily="@font/ibm_semibold"
+                android:text="3번!!"
+                android:visibility="invisible" />
+
             <androidx.appcompat.widget.AppCompatButton
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:background="@drawable/round_pink"
                 android:layout_columnSpan="2"
                 android:layout_gravity="fill_horizontal"
-                android:text="2번!!" />
+                android:background="@drawable/round_blue"
+                android:fontFamily="@font/ibm_semibold"
+                android:text="2번!!"
+                android:textSize="20sp"
+                android:visibility="invisible" />
+
             <androidx.appcompat.widget.AppCompatButton
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:background="@drawable/round_pink"
                 android:layout_row="1"
                 android:layout_column="3"
-                android:text="2번!!" />
+                android:background="@drawable/round_blue"
+                android:fontFamily="@font/ibm_semibold"
+                android:text="2번!!"
+                android:textSize="20sp"
+                android:visibility="invisible" />
 
 
         </GridLayout>
@@ -227,21 +185,23 @@
             android:layout_weight="1">
 
             <androidx.appcompat.widget.AppCompatButton
-                android:id="@+id/btn1"
+                android:id="@+id/rel_btn1"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_alignTop="@id/btn2"
-                android:layout_toLeftOf="@id/btn2"
-                android:background="@drawable/round_pink"
+                android:layout_alignTop="@id/rel_btn2"
+                android:layout_toLeftOf="@id/rel_btn2"
+                android:background="@drawable/round_green"
+                android:fontFamily="@font/ibm_semibold"
                 android:text="Relative" />
 
             <androidx.appcompat.widget.AppCompatButton
-                android:id="@+id/btn2"
+                android:id="@+id/rel_btn2"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_above="@id/btn3"
                 android:layout_alignParentEnd="true"
-                android:background="@drawable/round_pink"
+                android:background="@drawable/round_green"
+                android:fontFamily="@font/ibm_semibold"
                 android:text="Layout" />
 
             <androidx.appcompat.widget.AppCompatButton
@@ -250,8 +210,10 @@
                 android:layout_height="wrap_content"
                 android:layout_alignParentEnd="true"
                 android:layout_alignParentBottom="true"
-                android:background="@drawable/round_pink"
-                android:text="3번!!" />
+                android:background="@drawable/round_blue"
+                android:fontFamily="@font/ibm_semibold"
+                android:text="Base"
+                android:textSize="20sp" />
 
         </RelativeLayout>
 
