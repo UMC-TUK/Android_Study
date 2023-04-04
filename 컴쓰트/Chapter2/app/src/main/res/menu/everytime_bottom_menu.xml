@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <item
+        android:icon="@drawable/home"
+        android:iconTint="#BBBABA"
+        app:showAsAction="always"
+        android:title="home1" />
+
+
+    <item
+        android:id="@+id/schedule"
+        android:title="schedule"
+        android:icon="@drawable/schedule"
+        android:iconTint="#BBBABA"
+        app:showAsAction="always"/>
+
+    <item
+        android:id="@+id/board"
+        android:title="noticeboard"
+        android:icon="@drawable/board"
+        android:iconTint="#BBBABA"
+        app:showAsAction="always"/>
+
+    <item
+        android:id="@+id/notification"
+        android:iconTint="#BBBABA"
+        android:title="notice"
+        android:icon="@drawable/notifications_botttom"
+        app:showAsAction="always"/>
+
+    <item
+        android:id="@+id/sns"
+        android:title="sns"
+        android:iconTint="#BBBABA"
+        android:icon="@drawable/ads"
+        app:showAsAction="always"/>
+
+</menu>
