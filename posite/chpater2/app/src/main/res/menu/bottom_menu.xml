@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+    <item
+        android:id="@+id/insta_home"
+        android:enabled="true"
+        android:title="home"
+        android:icon="@drawable/baseline_home_24"
+        android:textAllCaps="false"
+        app:showAsAction="ifRoom"/>
+    <item
+        android:id="@+id/insta_search"
+        android:enabled="true"
+        android:title="search"
+        android:icon="@drawable/baseline_search_24"
+        android:textAllCaps="false"
+        app:showAsAction="ifRoom"/>
+    <item
+        android:id="@+id/insta_post"
+        android:enabled="true"
+        android:title="post"
+        android:icon="@drawable/baseline_add_circle_outline_24"
+        android:textAllCaps="false"
+        app:showAsAction="ifRoom"/>
+    <item
+        android:id="@+id/insta_reels"
+        android:enabled="true"
+        android:title="reels"
+        android:icon="@drawable/baseline_movie_filter_24"
+        android:textAllCaps="false"
+        app:showAsAction="ifRoom"/>
+    <item
+        android:id="@+id/insta_account"
+        android:enabled="true"
+        android:title="account"
+        android:icon="@drawable/baseline_account_circle_24"
+        android:textAllCaps="false"
+        app:showAsAction="ifRoom"/>
+
+</menu>

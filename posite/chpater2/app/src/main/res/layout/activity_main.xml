@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+        <variable
+            name="instaViewmodel"
+            type="com.example.chapter2.Viewmodel" />
+
+    </data>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:weightSum="3.4"
+        tools:context=".activity.compare.RepoCompareActivity">
+
+        <androidx.appcompat.widget.Toolbar
+            android:id="@+id/toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="0.3"
+            app:titleTextAppearance="@style/Toolbar.TitleText"
+            android:background="@android:color/transparent" />
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="3.1"
+            android:orientation="vertical"
+            android:weightSum="5">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:orientation="vertical"
+                android:layout_weight="4.5"
+                android:weightSum="5">
+
+                <androidx.recyclerview.widget.RecyclerView
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:id="@+id/reels_recycler"
+                    android:layout_weight="0.7"
+                    android:orientation="horizontal"
+                    tools:listitem="@layout/reels_list"/>
+
+            </LinearLayout>
+
+            <com.google.android.material.bottomnavigation.BottomNavigationView
+                android:id="@+id/bottom_navigation"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="0.5"
+                android:background="@color/white"
+                android:elevation="10dp"
+                app:labelVisibilityMode="unlabeled"
+                app:itemIconTint="@drawable/menu_selector"
+                app:menu="@menu/bottom_menu" />
+
+        </LinearLayout>
+
+
+    </LinearLayout>
+</layout>
