@@ -2,6 +2,6 @@
 <resources>
     <style name="Toolbar.TitleText" parent="TextAppearance.Widget.AppCompat.Toolbar.Title">
         <item name="android:fontFamily">@font/insta</item>
-        <item name="android:textSize">25sp</item>
+        <item name="android:textSize">30sp</item>
     </style>
 </resources>
