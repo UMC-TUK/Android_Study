@@ -122,24 +122,28 @@
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:gravity="center_vertical"
         android:orientation="horizontal"
         android:weightSum="5">
 
         <TextView
             android:id="@+id/writer_id"
             android:layout_width="wrap_content"
-            android:layout_height="match_parent"
-            android:layout_marginHorizontal="5sp"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="5sp"
+            android:fontFamily="@font/ibm_semibold"
+            android:gravity="center_vertical"
             android:textColor="@color/black"
-            android:textSize="20sp" />
+            android:textSize="11sp" />
 
         <TextView
             android:id="@+id/feed_title"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginHorizontal="5sp"
+            android:gravity="center_vertical"
             android:textColor="@color/black"
-            android:textSize="20sp" />
+            android:textSize="11sp" />
 
     </LinearLayout>
 
@@ -147,6 +151,7 @@
         android:id="@+id/feed_comment_field"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:gravity="center_vertical"
         android:orientation="horizontal"
         android:weightSum="5">
 
@@ -154,17 +159,20 @@
             android:id="@+id/commenter_id"
             android:layout_width="wrap_content"
             android:layout_height="match_parent"
-            android:layout_marginHorizontal="5sp"
+            android:layout_marginLeft="5sp"
+            android:gravity="center_vertical"
+            android:fontFamily="@font/ibm_semibold"
             android:textColor="@color/black"
-            android:textSize="20sp" />
+            android:textSize="11sp" />
 
         <TextView
             android:id="@+id/comment_content"
             android:layout_width="wrap_content"
             android:layout_height="match_parent"
+            android:gravity="center_vertical"
             android:layout_marginHorizontal="5sp"
             android:textColor="@color/black"
-            android:textSize="20sp" />
+            android:textSize="11sp" />
 
     </LinearLayout>
 
