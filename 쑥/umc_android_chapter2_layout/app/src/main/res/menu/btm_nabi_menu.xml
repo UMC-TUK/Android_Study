@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item
+        android:id="@+id/tab_home"
+        android:enabled="true"
+        android:icon="@drawable/house"
+        android:title="@string/home"/>
+    <item
+        android:id="@+id/benefit"
+        android:enabled="true"
+        android:icon="@drawable/diamond"
+        android:title="@string/benefit"/>
+    <item
+        android:id="@+id/tab_tosspay"
+        android:enabled="true"
+        android:icon="@drawable/catical"
+        android:title="@string/toss_pay"/>
+    <item
+        android:id="@+id/tab_share"
+        android:enabled="true"
+        android:icon="@drawable/chartline"
+        android:title="@string/share"/>
+    <item
+        android:id="@+id/tab_total"
+        android:enabled="true"
+        android:icon="@drawable/etc"
+        android:title="@string/total_option"/>
+</menu>

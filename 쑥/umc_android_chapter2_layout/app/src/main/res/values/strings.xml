@@ -1,0 +1,28 @@
+<resources>
+    <string name="app_name">umc_android_chapter2_layout</string>
+    <string name="tossbank_title">토스뱅크</string>
+    <string name="tossbank_ad_title">공짜 비행기 표 이벤트</string>
+    <string name="tossbank_ad_context">벌써 100명 당첨!</string>
+    <string name="captital_title">자산</string>
+    <string name="uribank_account">우리 SUPER주거래 통장</string>
+    <string name="money1">n,nnn,nnn원</string>
+    <string name="sinhanbank_account">신한 내일배움카드 통장</string>
+    <string name="money2">nnn,nnn원</string>
+    <string name="toss_share">증권 · 토스증권</string>
+    <string name="send_money">송금</string>
+    <string name="point">포인트 · 머니 · 1개</string>
+    <string name="money3">nnn원</string>
+    <string name="fund">투자</string>
+    <string name="share">주식</string>
+    <string name="money4">nn,nnn원</string>
+    <string name="spend">소비</string>
+    <string name="spend_for_a_month">이번 달 쓴 금액</string>
+    <string name="home">홈</string>
+    <string name="benefit">혜택</string>
+    <string name="toss_pay">토스페이</string>
+    <string name="total_option">전체</string>
+    <string name="share_percent">+5.32%</string>
+    <string name="option">환경 설정</string>
+    <string name="capital_add">자산 추가</string>
+    <string name="icon_capyright"><a href="https://www.flaticon.com/kr/free-icons/" title="박수 아이콘">박수 아이콘  제작자: bukeicon - Flaticon</a></string>
+</resources>
