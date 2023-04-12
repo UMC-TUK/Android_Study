@@ -11,7 +11,6 @@ import androidx.constraintlayout.widget.ConstraintLayout
 import androidx.recyclerview.widget.RecyclerView
 
 class ReelsAdapter (private val datas : ArrayList<ReelsModel>, private val context: Context) : RecyclerView.Adapter<ReelsAdapter.ViewHolder>() {
-    private var ranking  = 1
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ViewHolder {
         val view = LayoutInflater.from(parent.context).inflate(R.layout.reels_list,parent,false)

@@ -4,6 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools">
 
     <data>
+
         <variable
             name="instaViewmodel"
             type="com.example.chapter3.Viewmodel" />
@@ -23,7 +24,26 @@
             android:layout_weight="0.3"
             android:background="@android:color/transparent"
             android:gravity="center_vertical"
-            app:titleTextAppearance="@style/Toolbar.TitleText" />
+            app:titleTextAppearance="@style/Toolbar.TitleText">
+
+            <androidx.appcompat.widget.SearchView
+                android:id="@+id/search_content"
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:layout_marginEnd="5dp"
+                android:background="@drawable/round_gray"
+                android:textSize="11sp"
+                android:visibility="gone"
+                app:closeIcon="@drawable/baseline_clear_24"
+                app:iconifiedByDefault="false"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:queryBackground="@null"
+                app:queryHint="검색"
+                app:searchIcon="@drawable/baseline_search_24" />
+
+        </androidx.appcompat.widget.Toolbar>
 
         <FrameLayout
             android:id="@+id/change_frame"
@@ -41,7 +61,6 @@
             app:itemIconTint="@drawable/menu_selector"
             app:labelVisibilityMode="unlabeled"
             app:menu="@menu/bottom_menu" />
-
 
     </LinearLayout>
 </layout>

@@ -8,8 +8,6 @@ import android.widget.ImageView
 import androidx.recyclerview.widget.RecyclerView
 
 class FeedImgAdapter (private val datas : ArrayList<FeedImgModel>, private val context: Context) : RecyclerView.Adapter<FeedImgAdapter.ViewHolder>() {
-    private var ranking  = 1
-
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ViewHolder {
         val view = LayoutInflater.from(parent.context).inflate(R.layout.feed_images_list,parent,false)
         return ViewHolder(view)

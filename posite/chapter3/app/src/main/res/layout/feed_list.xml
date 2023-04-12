@@ -3,7 +3,7 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
-    android:layout_marginVertical="7sp"
+    android:layout_marginVertical="7dp"
     android:orientation="vertical">
 
     <LinearLayout
@@ -28,6 +28,7 @@
                 android:id="@+id/insta_id"
                 android:layout_width="wrap_content"
                 android:layout_height="30sp"
+                android:fontFamily="@font/ibm_semibold"
                 android:gravity="center_vertical"
                 android:textColor="@color/black" />
         </LinearLayout>
@@ -51,13 +52,15 @@
 
     <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="35sp"
+        android:layout_height="40dp"
+        android:layout_marginTop="4dp"
         android:orientation="horizontal"
         android:weightSum="5">
 
         <LinearLayout
             android:layout_width="0dp"
             android:layout_height="match_parent"
+            android:layout_marginStart="15dp"
             android:layout_weight="2.3"
             android:orientation="horizontal">
 
@@ -65,8 +68,7 @@
                 android:id="@+id/feed_like"
                 android:layout_width="wrap_content"
                 android:layout_height="match_parent"
-                android:layout_marginHorizontal="4sp"
-                android:adjustViewBounds="true"
+                android:layout_marginEnd="8dp"
                 android:background="@android:color/transparent"
                 android:src="@drawable/baseline_favorite_border_24" />
 
@@ -74,8 +76,7 @@
                 android:id="@+id/feed_comment"
                 android:layout_width="wrap_content"
                 android:layout_height="match_parent"
-                android:layout_marginHorizontal="4sp"
-                android:adjustViewBounds="true"
+                android:layout_marginHorizontal="8dp"
                 android:background="@android:color/transparent"
                 android:src="@drawable/baseline_chat_bubble_outline_24" />
 
@@ -83,8 +84,7 @@
                 android:id="@+id/feed_send_message"
                 android:layout_width="wrap_content"
                 android:layout_height="match_parent"
-                android:layout_marginHorizontal="4sp"
-                android:adjustViewBounds="true"
+                android:layout_marginHorizontal="8dp"
                 android:background="@android:color/transparent"
                 android:src="@drawable/baseline_send_24" />
 
@@ -111,7 +111,7 @@
                 android:id="@+id/feed_mark"
                 android:layout_width="wrap_content"
                 android:layout_height="match_parent"
-                android:layout_marginHorizontal="5sp"
+                android:layout_marginHorizontal="4dp"
                 android:adjustViewBounds="true"
                 android:background="@android:color/transparent"
                 android:src="@drawable/baseline_bookmark_border_24" />
@@ -122,28 +122,34 @@
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:layout_marginVertical="0dp"
+        android:layout_marginStart="10dp"
         android:gravity="center_vertical"
         android:orientation="horizontal"
+        android:paddingVertical="0dp"
         android:weightSum="5">
 
         <TextView
             android:id="@+id/writer_id"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginLeft="5sp"
+            android:layout_marginVertical="0dp"
             android:fontFamily="@font/ibm_semibold"
             android:gravity="center_vertical"
+            android:paddingVertical="0dp"
             android:textColor="@color/black"
-            android:textSize="11sp" />
+            android:textSize="15sp" />
 
         <TextView
             android:id="@+id/feed_title"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginHorizontal="5sp"
+            android:layout_marginHorizontal="5dp"
+            android:layout_marginVertical="0dp"
             android:gravity="center_vertical"
+            android:paddingVertical="0dp"
             android:textColor="@color/black"
-            android:textSize="11sp" />
+            android:textSize="15sp" />
 
     </LinearLayout>
 
@@ -151,28 +157,34 @@
         android:id="@+id/feed_comment_field"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:layout_marginVertical="0dp"
+        android:layout_marginStart="10dp"
         android:gravity="center_vertical"
         android:orientation="horizontal"
+        android:paddingVertical="0dp"
         android:weightSum="5">
 
         <TextView
             android:id="@+id/commenter_id"
             android:layout_width="wrap_content"
             android:layout_height="match_parent"
-            android:layout_marginLeft="5sp"
-            android:gravity="center_vertical"
+            android:layout_marginVertical="0dp"
             android:fontFamily="@font/ibm_semibold"
+            android:gravity="center_vertical"
+            android:paddingVertical="0dp"
             android:textColor="@color/black"
-            android:textSize="11sp" />
+            android:textSize="15sp" />
 
         <TextView
             android:id="@+id/comment_content"
             android:layout_width="wrap_content"
             android:layout_height="match_parent"
+            android:layout_marginHorizontal="5dp"
+            android:layout_marginVertical="0dp"
             android:gravity="center_vertical"
-            android:layout_marginHorizontal="5sp"
+            android:paddingVertical="0dp"
             android:textColor="@color/black"
-            android:textSize="11sp" />
+            android:textSize="15sp" />
 
     </LinearLayout>
 
