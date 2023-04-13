@@ -20,7 +20,7 @@
         android:id="@+id/insta_post"
         android:enabled="true"
         android:title="post"
-        android:icon="@drawable/baseline_add_circle_outline_24"
+        android:icon="@drawable/add"
         android:textAllCaps="false"
         app:showAsAction="ifRoom"/>
     <item

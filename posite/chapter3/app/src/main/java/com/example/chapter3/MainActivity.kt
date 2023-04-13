@@ -18,6 +18,7 @@ class MainActivity : AppCompatActivity() {
     private var viewmodel = Viewmodel()
     private lateinit var mainFrag: MainFragment
     private lateinit var searchFrag: SearchFragment
+    private lateinit var profileFrag: ProfileFragment
     private lateinit var toolbarMenu: Menu
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -33,9 +34,12 @@ class MainActivity : AppCompatActivity() {
 
         mainFrag = MainFragment()
         searchFrag = SearchFragment()
+        profileFrag = ProfileFragment()
         val transaction = supportFragmentManager.beginTransaction()
         transaction.add(R.id.change_frame, mainFrag)
             .add(R.id.change_frame, searchFrag)
+            .add(R.id.change_frame, profileFrag)
+            .hide(profileFrag)
             .hide(searchFrag)
             .commit()
 
@@ -45,11 +49,13 @@ class MainActivity : AppCompatActivity() {
                 R.id.insta_home -> {
                     supportActionBar?.setDisplayShowTitleEnabled(true)
                     supportActionBar?.title = "Instagram"
+                    binding.toolbar.setTitleTextAppearance(this, R.style.Toolbar_TitleText)
                     toolbarMenu.clear()
                     menuInflater.inflate(R.menu.toolbar_menu, binding.toolbar.menu)
                     binding.searchContent.visibility = View.GONE
                     val transactionN = supportFragmentManager.beginTransaction()
                     transactionN.show(mainFrag)
+                        .hide(profileFrag)
                         .hide(searchFrag)
                         .commit()
                 }
@@ -60,6 +66,7 @@ class MainActivity : AppCompatActivity() {
                     binding.searchContent.visibility = View.VISIBLE
                     val transactionN = supportFragmentManager.beginTransaction()
                     transactionN.show(searchFrag)
+                        .hide(profileFrag)
                         .hide(mainFrag)
                         .commit()
                 }
@@ -71,6 +78,17 @@ class MainActivity : AppCompatActivity() {
                 }
                 R.id.insta_account -> {
                     Toast.makeText(applicationContext, "바텀네비게이션뷰의 내 계정 눌림!!", Toast.LENGTH_SHORT).show()
+                    supportActionBar?.setDisplayShowTitleEnabled(true)
+                    binding.toolbar.setTitleTextAppearance(this, R.style.Toolbar_Normal)
+                    toolbarMenu.clear()
+                    menuInflater.inflate(R.menu.profile_menu, binding.toolbar.menu)
+                    binding.searchContent.visibility = View.GONE
+                    supportActionBar?.title = "posite8481"
+                    val transactionN = supportFragmentManager.beginTransaction()
+                    transactionN.show(profileFrag)
+                        .hide(searchFrag)
+                        .hide(mainFrag)
+                        .commit()
                 }
             }
             true
@@ -94,6 +112,12 @@ class MainActivity : AppCompatActivity() {
             }
             R.id.insta_search_place -> {
                 Toast.makeText(this, "장소검색 버튼 눌림!!", Toast.LENGTH_SHORT).show()
+            }
+            R.id.profile_make -> {
+                Toast.makeText(this, "만들기 버튼 눌림!!", Toast.LENGTH_SHORT).show()
+            }
+            R.id.profile_menu -> {
+                Toast.makeText(this, "메뉴 버튼 눌림!!", Toast.LENGTH_SHORT).show()
             }
         }
         return super.onOptionsItemSelected(item)

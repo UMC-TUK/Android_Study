@@ -4,4 +4,13 @@
         <item name="android:fontFamily">@font/insta</item>
         <item name="android:textSize">30sp</item>
     </style>
+
+    <style name="Toolbar.Normal" parent="TextAppearance.Widget.AppCompat.Toolbar.Title">
+        <item name="android:fontFamily">@font/ibm_semibold</item>
+        <item name="android:textSize">25sp</item>
+    </style>
+    <style name="TransparentMenuStyle" parent="Widget.AppCompat.Toolbar">
+        <item name="android:background">@android:color/white</item>
+        <item name="android:itemBackground">@android:color/white</item>
+    </style>
 </resources>

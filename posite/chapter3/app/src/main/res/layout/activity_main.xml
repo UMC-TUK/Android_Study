@@ -21,9 +21,9 @@
             android:id="@+id/toolbar"
             android:layout_width="match_parent"
             android:layout_height="0dp"
-            android:layout_weight="0.3"
-            android:background="@android:color/transparent"
+            android:layout_weight="0.25"
             android:gravity="center_vertical"
+            app:popupTheme="@style/TransparentMenuStyle"
             app:titleTextAppearance="@style/Toolbar.TitleText">
 
             <androidx.appcompat.widget.SearchView
@@ -49,7 +49,7 @@
             android:id="@+id/change_frame"
             android:layout_width="match_parent"
             android:layout_height="0dp"
-            android:layout_weight="2.8" />
+            android:layout_weight="2.85" />
 
         <com.google.android.material.bottomnavigation.BottomNavigationView
             android:id="@+id/bottom_navigation"
@@ -60,6 +60,7 @@
             android:elevation="10dp"
             app:itemIconTint="@drawable/menu_selector"
             app:labelVisibilityMode="unlabeled"
+            app:popupTheme="@style/TransparentMenuStyle"
             app:menu="@menu/bottom_menu" />
 
     </LinearLayout>
