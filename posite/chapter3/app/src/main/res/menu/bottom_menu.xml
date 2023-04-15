@@ -27,7 +27,7 @@
         android:id="@+id/insta_reels"
         android:enabled="true"
         android:title="reels"
-        android:icon="@drawable/baseline_movie_filter_24"
+        android:icon="@drawable/video"
         android:textAllCaps="false"
         app:showAsAction="ifRoom"/>
     <item

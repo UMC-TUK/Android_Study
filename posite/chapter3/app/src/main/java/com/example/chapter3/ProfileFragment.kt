@@ -6,13 +6,15 @@ import android.view.View
 import android.view.ViewGroup
 import androidx.databinding.DataBindingUtil
 import androidx.fragment.app.Fragment
+import androidx.viewpager2.widget.ViewPager2
 import com.example.chapter3.databinding.ProfileFragmentBinding
+import com.google.android.material.tabs.TabLayout
+import com.google.android.material.tabs.TabLayoutMediator
 
 class ProfileFragment: Fragment() {
     private lateinit var binding: ProfileFragmentBinding
     private var viewmodel = Viewmodel()
-    private val contents = ArrayList<ContentModel>()
-    private val types = ArrayList<String>()
+
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
@@ -25,8 +27,12 @@ class ProfileFragment: Fragment() {
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
-
-
+        binding.userContent.adapter = UserFeedAdapter(this)
+        binding.userContent.isUserInputEnabled = true
+        val tabs = arrayOf(R.drawable.grid, R.drawable.video, R.drawable.avatar)
+        TabLayoutMediator(binding.userTab, binding.userContent) { tab, position ->
+            tab.setIcon(tabs[position])
+        }.attach()
 
     }
 

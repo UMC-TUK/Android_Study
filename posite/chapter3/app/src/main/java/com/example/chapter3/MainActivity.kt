@@ -135,7 +135,9 @@ class MainActivity : AppCompatActivity() {
                     val transactionN = supportFragmentManager.beginTransaction()
                     transactionN.show(mainFrag)
                         .hide(searchFrag)
+                        .hide(profileFrag)
                         .commit()
+                    binding.bottomNavigation.selectedItemId = R.id.insta_home
                     Toast.makeText(applicationContext, "뒤로가기 눌림!!", Toast.LENGTH_SHORT).show()
                     break
                 }

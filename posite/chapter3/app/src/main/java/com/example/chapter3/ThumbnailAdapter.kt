@@ -36,11 +36,13 @@ class ThumbnailAdapter(private val datas: ArrayList<ContentModel>, private val c
         fun bind(data1: ContentModel) {
             profile.setImageResource(data1.thumbnail)
             if (data1.type == "reels") {
-                type.setImageResource(R.drawable.baseline_smart_display_24)
-                val layoutParams = FrameLayout.LayoutParams(profile.layoutParams.width, profile.layoutParams.height*2)
-                profile.layoutParams = layoutParams
+                type.setImageResource(R.drawable.video)
+                if(data1.columnSapn ==2) {
+                    val layoutParams = FrameLayout.LayoutParams(profile.layoutParams.width, profile.layoutParams.height*2)
+                    profile.layoutParams = layoutParams
+                }
             } else {
-                type.setImageResource(R.drawable.baseline_photo_library_24)
+                type.setImageResource(R.drawable.page)
             }
         }
     }
