@@ -1,7 +1,11 @@
 package com.study.umc_android_chapter2_layout
 
+import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.view.View
+import androidx.activity.result.ActivityResultLauncher
+import androidx.activity.result.contract.ActivityResultContracts
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.study.umc_android_chapter2.adapter.AppADViewAdapter
 import com.study.umc_android_chapter2_layout.data.AppAD
@@ -12,9 +16,9 @@ class MainActivity : AppCompatActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-//        setContentView(R.layout.activity_main)
         val binding = ActivityMainBinding.inflate(layoutInflater)
         setContentView(binding.root)
+
 
         appADList = ArrayList(4)
 
@@ -28,5 +32,7 @@ class MainActivity : AppCompatActivity() {
 
         binding.horizontalRecyclerview.adapter = appADViewAdapter
         binding.horizontalRecyclerview.layoutManager = LinearLayoutManager(this, LinearLayoutManager.HORIZONTAL, false)
+
+
     }
 }

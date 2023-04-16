@@ -24,5 +24,19 @@
     <string name="share_percent">+5.32%</string>
     <string name="option">환경 설정</string>
     <string name="capital_add">자산 추가</string>
-    <string name="icon_capyright"><a href="https://www.flaticon.com/kr/free-icons/" title="박수 아이콘">박수 아이콘  제작자: bukeicon - Flaticon</a></string>
+    <string name="icon_capyright_clapping_ad_tossbank"><a href="https://www.flaticon.com/kr/free-icons/" title="박수 아이콘">박수 아이콘  제작자: bukeicon - Flaticon</a></string>
+    <string name="share_title">투자 모아보기</string>
+    <string name="icon_capyright_graph"><a href="https://www.flaticon.com/kr/free-icons/-" title="파이 차트 아이콘">파이 차트 아이콘  제작자: Andrean Prabowo - Flaticon</a></string>
+    <string name="icon_capyright_live"><a href="https://www.flaticon.com/kr/free-icons/" title="라이브 아이콘">라이브 아이콘  제작자: srip - Flaticon</a></string>
+    <string name="icon_capyright_dart"><a href="https://www.flaticon.com/kr/free-icons/-" title="다트 판 아이콘">다트 판 아이콘  제작자: Freepik - Flaticon</a></string>
+    <string name="icon_capyright_shoes"><a href="https://www.flaticon.com/kr/free-icons/" title="운동화 아이콘">운동화 아이콘  제작자: BZZRINCANTATION - Flaticon</a></string>
+    <string name="icon_capyright_megaphone"><a href="https://www.flaticon.com/kr/free-icons/" title="메가폰 아이콘">메가폰 아이콘  제작자: Freepik - Flaticon</a></string>
+    <string name="icon_capyright_phone"><a href="https://www.flaticon.com/kr/free-icons/-" title="스마트 폰 아이콘">스마트 폰 아이콘  제작자: Freepik - Flaticon</a></string>
+    <string name="icon_capyright_download"><a href="https://www.flaticon.com/kr/free-icons/-" title="사용자 인터페이스 아이콘">사용자 인터페이스 아이콘  제작자: Rizki Ahmad Fauzi - Flaticon</a></string>
+    <string name="icon_capyright_P"><a href="https://www.flaticon.com/kr/free-icons/-p" title="편지 p 아이콘">편지 p 아이콘  제작자: Hight Quality Icons - Flaticon</a></string>
+    <string name="icon_capyright_percent"><a href="https://www.flaticon.com/kr/free-icons/" title="백분율 아이콘">백분율 아이콘  제작자: Freepik - Flaticon</a></string>
+    <string name="underline_string"><u>우리은행 1002123456789</u></string>
+    <string name="icon_capyright_reload"><a href="https://www.flaticon.com/kr/free-icons/" title="일주 아이콘">일주 아이콘  제작자: Tanah Basah - Flaticon</a></string>
+    <string name="icon_capyright_shopping_bag"><a href="https://www.flaticon.com/kr/free-icons/" title="쇼핑백 아이콘">쇼핑백 아이콘  제작자: IYAHICON - Flaticon</a></string>
+    <string name="icon_capyright_store"><a href="https://www.flaticon.com/kr/free-icons/-" title="온라인 상점 아이콘">온라인 상점 아이콘  제작자: Freepik - Flaticon</a></string>
 </resources>

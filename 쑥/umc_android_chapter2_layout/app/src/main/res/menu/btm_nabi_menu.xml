@@ -6,7 +6,7 @@
         android:icon="@drawable/house"
         android:title="@string/home"/>
     <item
-        android:id="@+id/benefit"
+        android:id="@+id/tab_benefit"
         android:enabled="true"
         android:icon="@drawable/diamond"
         android:title="@string/benefit"/>
