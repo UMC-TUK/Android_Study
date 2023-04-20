@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <item
+        android:icon="@drawable/home"
+        android:iconTint="@color/black"
+        app:showAsAction="always"
+        android:title="홈" />
+
+    <item
+        android:id="@+id/search"
+        android:title="검색"
+        android:icon="@drawable/search"
+        android:iconTint="@color/white"
+        app:showAsAction="always"/>
+
+    <item
+        android:id="@+id/add"
+        android:iconTint="@color/white"
+        android:title="추가"
+        android:icon="@drawable/add_box"
+        app:showAsAction="always"/>
+
+    <item
+        android:id="@+id/video"
+        android:title="비디오"
+        android:iconTint="@color/white"
+        android:icon="@drawable/video"
+        app:showAsAction="always"/>
+
+    <item
+        android:id="@+id/profil"
+        android:title="프로필"
+        android:iconTint="#BBBAFA"
+        android:icon="@drawable/person"
+        app:showAsAction="always"/>
+
+
+</menu>
