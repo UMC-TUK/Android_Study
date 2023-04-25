@@ -1,20 +1,11 @@
-package com.example.chapter3
+package com.example.chapter2_exercise
 
-import android.app.ActionBar.LayoutParams
 import android.content.Context
-import android.util.DisplayMetrics
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.FrameLayout
 import android.widget.ImageView
-import android.widget.TextView
-import android.widget.Toast
-import androidx.constraintlayout.widget.ConstraintLayout
-import androidx.constraintlayout.widget.ConstraintSet
-import androidx.core.view.marginEnd
-import androidx.core.view.marginLeft
-import androidx.recyclerview.widget.GridLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 
 class ThumbnailAdapter(private val datas: ArrayList<ContentModel>, private val context: Context) : RecyclerView.Adapter<ThumbnailAdapter.ViewHolder>() {

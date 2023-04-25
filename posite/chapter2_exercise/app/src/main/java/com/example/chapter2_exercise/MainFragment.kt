@@ -1,13 +1,11 @@
-package com.example.chapter3
+package com.example.chapter2_exercise
 
 import android.os.Bundle
 import android.view.*
-import android.widget.Toast
-import androidx.appcompat.app.AppCompatActivity
 import androidx.databinding.DataBindingUtil
 import androidx.fragment.app.Fragment
 import androidx.recyclerview.widget.LinearLayoutManager
-import com.example.chapter3.databinding.MainFragmentBinding
+import com.example.chapter2_exercise.databinding.MainFragmentBinding
 
 class MainFragment: Fragment() {
     private lateinit var binding: MainFragmentBinding

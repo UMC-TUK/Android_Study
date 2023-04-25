@@ -1,4 +1,4 @@
-package com.example.chapter3
+package com.example.chapter2_exercise
 
 import androidx.test.platform.app.InstrumentationRegistry
 import androidx.test.ext.junit.runners.AndroidJUnit4
