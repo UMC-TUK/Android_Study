@@ -1,0 +1,579 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/light_gray"
+    tools:context=".RemitActivity">
+
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/toolbar"
+        style="?attr/toolbarStyle"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:elevation="0dp"
+        android:fitsSystemWindows="false"
+        android:gravity="center"
+        app:contentInsetEnd="0dp"
+        app:contentInsetStart="0dp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <TextView
+            android:id="@+id/countName"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="start|center"
+            android:text="자유저축"
+            android:textColor="@color/black"
+            android:textSize="20sp" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="end|center"
+            android:layout_marginEnd="20dp"
+            android:clickable="true"
+            android:focusable="true"
+            android:text="관리"
+            android:textColor="@color/black"
+            android:textSize="18sp" />
+
+    </androidx.appcompat.widget.Toolbar>
+
+    <ScrollView
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/toolbar"
+        app:layout_constraintVertical_bias="0.0">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:id="@+id/countId"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="15dp"
+                android:layout_marginTop="60dp"
+                android:text="@string/countId"
+                android:textColor="@color/light_black"
+                android:textSize="15sp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/money"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="15dp"
+                android:layout_marginTop="5dp"
+                android:text="00원"
+                android:textColor="@color/black"
+                android:textSize="35sp"
+                android:textStyle="bold"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/countId" />
+
+            <Button
+                android:id="@+id/fillBtn"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="15dp"
+                android:layout_marginTop="45dp"
+                android:background="@drawable/cornor_round_3"
+                android:backgroundTint="@color/gray_blue"
+                android:stateListAnimator="@null"
+                android:text="채우기"
+                android:textColor="@color/blue"
+                android:textSize="15sp"
+                android:textStyle="bold"
+                app:layout_constraintEnd_toStartOf="@id/sandBtn"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/money" />
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/sandBtn"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="15dp"
+                android:layout_marginTop="45dp"
+                android:layout_marginEnd="15dp"
+                android:background="@drawable/cornor_round_3"
+                android:backgroundTint="@color/blue"
+                android:stateListAnimator="@null"
+                android:text="보내기"
+                android:textColor="@color/white"
+                android:textSize="15sp"
+                android:textStyle="bold"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@id/fillBtn"
+                app:layout_constraintTop_toBottomOf="@id/money" />
+
+            <TextView
+                android:id="@+id/sortBtn"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="15dp"
+                android:layout_marginTop="45dp"
+                android:drawableEnd="@drawable/baseline_keyboard_arrow_down_24"
+                android:drawableTint="@color/light_black"
+                android:text="전체"
+                android:textColor="@color/light_black"
+                android:textSize="18sp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/fillBtn" />
+
+            <TextView
+                android:id="@+id/refreshBtn"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="15dp"
+                android:layout_marginEnd="15dp"
+                android:drawableEnd="@drawable/baseline_refresh_24"
+                android:drawableTint="@color/light_black"
+                android:text="방금 전"
+                android:textColor="@color/light_black"
+                android:textSize="13sp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="@id/sortBtn" />
+
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="15dp"
+                android:orientation="vertical"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/sortBtn">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginHorizontal="15dp"
+                    android:text="00월 00일"
+                    android:textColor="@color/light_black"
+                    android:textSize="13sp" />
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginHorizontal="15dp"
+                    android:background="@color/white"
+                    android:backgroundTint="@color/button_clicked_light_gray"
+                    android:clickable="true"
+                    android:focusable="true"
+                    android:paddingVertical="10dp">
+
+                    <View
+                        android:id="@+id/logo"
+                        android:layout_width="40dp"
+                        android:layout_height="40dp"
+                        android:layout_margin="5dp"
+                        android:background="@drawable/circle"
+                        android:backgroundTint="@color/blue"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                    <TextView
+                        android:id="@+id/assetNameTextView"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="15dp"
+                        android:text="000000"
+                        android:textColor="@color/black"
+                        android:textSize="20sp"
+                        android:textStyle="bold"
+                        app:layout_constraintStart_toEndOf="@id/logo"
+                        app:layout_constraintTop_toTopOf="@id/logo" />
+
+                    <TextView
+                        android:id="@+id/moneyTextView"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="20:13"
+                        android:textColor="@color/light_black"
+                        android:textSize="13sp"
+                        app:layout_constraintBottom_toBottomOf="@id/logo"
+                        app:layout_constraintStart_toStartOf="@id/assetNameTextView"
+                        app:layout_constraintTop_toBottomOf="@id/assetNameTextView" />
+
+                    <TextView
+                        android:id="@+id/mNum"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="15dp"
+                        android:text="-XXXX원"
+                        android:textColor="@color/black"
+                        android:textSize="20sp"
+                        android:textStyle="bold"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintTop_toTopOf="@id/logo" />
+
+                    <TextView
+                        android:id="@+id/tNum"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="XXXXXXXXXX원"
+                        android:textColor="@color/light_black"
+                        android:textSize="13sp"
+                        app:layout_constraintBottom_toBottomOf="@id/logo"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintTop_toBottomOf="@id/assetNameTextView" />
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginHorizontal="15dp"
+                    android:background="@color/white"
+                    android:backgroundTint="@color/button_clicked_light_gray"
+                    android:clickable="true"
+                    android:focusable="true"
+                    android:paddingVertical="10dp">
+
+                    <de.hdodenhof.circleimageview.CircleImageView
+                        android:id="@+id/logo1"
+                        android:layout_width="40dp"
+                        android:layout_height="40dp"
+                        android:layout_margin="5dp"
+                        android:scaleType="centerCrop"
+                        android:src="@drawable/toss_logo"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                    <TextView
+                        android:id="@+id/assetNameTextView1"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="15dp"
+                        android:text="000000"
+                        android:textColor="@color/black"
+                        android:textSize="20sp"
+                        android:textStyle="bold"
+                        app:layout_constraintStart_toEndOf="@id/logo1"
+                        app:layout_constraintTop_toTopOf="@id/logo1" />
+
+                    <TextView
+                        android:id="@+id/moneyTextView1"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="19:43"
+                        android:textColor="@color/light_black"
+                        android:textSize="13sp"
+                        app:layout_constraintBottom_toBottomOf="@id/logo1"
+                        app:layout_constraintStart_toStartOf="@id/assetNameTextView1"
+                        app:layout_constraintTop_toBottomOf="@id/assetNameTextView1" />
+
+                    <TextView
+                        android:id="@+id/mNum1"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="15dp"
+                        android:text="-XXXX원"
+                        android:textColor="@color/black"
+                        android:textSize="20sp"
+                        android:textStyle="bold"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintTop_toTopOf="@id/logo1" />
+
+                    <TextView
+                        android:id="@+id/tNum1"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="XXXXXXXXXX원"
+                        android:textColor="@color/light_black"
+                        android:textSize="13sp"
+                        app:layout_constraintBottom_toBottomOf="@id/logo1"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintTop_toBottomOf="@id/assetNameTextView1" />
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginHorizontal="15dp"
+                    android:background="@color/white"
+                    android:backgroundTint="@color/button_clicked_light_gray"
+                    android:clickable="true"
+                    android:focusable="true"
+                    android:paddingVertical="10dp">
+
+                    <View
+                        android:id="@+id/logo2"
+                        android:layout_width="40dp"
+                        android:layout_height="40dp"
+                        android:layout_margin="5dp"
+                        android:background="@drawable/circle"
+                        android:backgroundTint="@color/blue"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                    <TextView
+                        android:id="@+id/assetNameTextView2"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="15dp"
+                        android:text="000000"
+                        android:textColor="@color/black"
+                        android:textSize="20sp"
+                        android:textStyle="bold"
+                        app:layout_constraintStart_toEndOf="@id/logo2"
+                        app:layout_constraintTop_toTopOf="@id/logo2" />
+
+                    <TextView
+                        android:id="@+id/moneyTextView2"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="08:13"
+                        android:textColor="@color/light_black"
+                        android:textSize="13sp"
+                        app:layout_constraintBottom_toBottomOf="@id/logo2"
+                        app:layout_constraintStart_toStartOf="@id/assetNameTextView2"
+                        app:layout_constraintTop_toBottomOf="@id/assetNameTextView2" />
+
+                    <TextView
+                        android:id="@+id/mNum2"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="15dp"
+                        android:text="-XXXX원"
+                        android:textColor="@color/black"
+                        android:textSize="20sp"
+                        android:textStyle="bold"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintTop_toTopOf="@id/logo2" />
+
+                    <TextView
+                        android:id="@+id/tNum2"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="XXXXXXXXXX원"
+                        android:textColor="@color/light_black"
+                        android:textSize="13sp"
+                        app:layout_constraintBottom_toBottomOf="@id/logo2"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintTop_toBottomOf="@id/assetNameTextView2" />
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginHorizontal="15dp"
+                    android:background="@color/white"
+                    android:backgroundTint="@color/button_clicked_light_gray"
+                    android:clickable="true"
+                    android:focusable="true"
+                    android:paddingVertical="10dp">
+
+                    <View
+                        android:id="@+id/logo3"
+                        android:layout_width="40dp"
+                        android:layout_height="40dp"
+                        android:layout_margin="5dp"
+                        android:background="@drawable/circle"
+                        android:backgroundTint="@color/blue"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                    <TextView
+                        android:id="@+id/assetNameTextView3"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="15dp"
+                        android:text="000000"
+                        android:textColor="@color/black"
+                        android:textSize="20sp"
+                        android:textStyle="bold"
+                        app:layout_constraintStart_toEndOf="@id/logo3"
+                        app:layout_constraintTop_toTopOf="@id/logo3" />
+
+                    <TextView
+                        android:id="@+id/moneyTextView3"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="06:11"
+                        android:textColor="@color/light_black"
+                        android:textSize="13sp"
+                        app:layout_constraintBottom_toBottomOf="@id/logo3"
+                        app:layout_constraintStart_toStartOf="@id/assetNameTextView3"
+                        app:layout_constraintTop_toBottomOf="@id/assetNameTextView3" />
+
+                    <TextView
+                        android:id="@+id/mNum3"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="15dp"
+                        android:text="-XXXX원"
+                        android:textColor="@color/black"
+                        android:textSize="20sp"
+                        android:textStyle="bold"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintTop_toTopOf="@id/logo3" />
+
+                    <TextView
+                        android:id="@+id/tNum3"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="XXXXXXXXXX원"
+                        android:textColor="@color/light_black"
+                        android:textSize="13sp"
+                        app:layout_constraintBottom_toBottomOf="@id/logo3"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintTop_toBottomOf="@id/assetNameTextView3" />
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginHorizontal="15dp"
+                    android:background="@color/white"
+                    android:backgroundTint="@color/button_clicked_light_gray"
+                    android:clickable="true"
+                    android:focusable="true"
+                    android:paddingVertical="10dp">
+
+                    <de.hdodenhof.circleimageview.CircleImageView
+                        android:id="@+id/logo4"
+                        android:layout_width="40dp"
+                        android:layout_height="40dp"
+                        android:layout_margin="5dp"
+                        android:scaleType="centerCrop"
+                        android:src="@drawable/toss_logo"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                    <TextView
+                        android:id="@+id/assetNameTextView4"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="15dp"
+                        android:text="000000"
+                        android:textColor="@color/black"
+                        android:textSize="20sp"
+                        android:textStyle="bold"
+                        app:layout_constraintStart_toEndOf="@id/logo4"
+                        app:layout_constraintTop_toTopOf="@id/logo4" />
+
+                    <TextView
+                        android:id="@+id/moneyTextView4"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="02:13"
+                        android:textColor="@color/light_black"
+                        android:textSize="13sp"
+                        app:layout_constraintBottom_toBottomOf="@id/logo4"
+                        app:layout_constraintStart_toStartOf="@id/assetNameTextView4"
+                        app:layout_constraintTop_toBottomOf="@id/assetNameTextView4" />
+
+                    <TextView
+                        android:id="@+id/mNum4"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="15dp"
+                        android:text="-XXXX원"
+                        android:textColor="@color/black"
+                        android:textSize="20sp"
+                        android:textStyle="bold"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintTop_toTopOf="@id/logo4" />
+
+                    <TextView
+                        android:id="@+id/tNum4"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="XXXXXXXXXX원"
+                        android:textColor="@color/light_black"
+                        android:textSize="13sp"
+                        app:layout_constraintBottom_toBottomOf="@id/logo4"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintTop_toBottomOf="@id/assetNameTextView4" />
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginHorizontal="15dp"
+                    android:background="@color/white"
+                    android:backgroundTint="@color/button_clicked_light_gray"
+                    android:clickable="true"
+                    android:focusable="true"
+                    android:paddingVertical="10dp">
+
+                    <de.hdodenhof.circleimageview.CircleImageView
+                        android:id="@+id/logo5"
+                        android:layout_width="40dp"
+                        android:layout_height="40dp"
+                        android:layout_margin="5dp"
+                        android:scaleType="centerCrop"
+                        android:src="@drawable/toss_logo"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                    <TextView
+                        android:id="@+id/assetNameTextView5"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="15dp"
+                        android:text="000000"
+                        android:textColor="@color/black"
+                        android:textSize="20sp"
+                        android:textStyle="bold"
+                        app:layout_constraintStart_toEndOf="@id/logo5"
+                        app:layout_constraintTop_toTopOf="@id/logo5" />
+
+                    <TextView
+                        android:id="@+id/moneyTextView5"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="02:08"
+                        android:textColor="@color/light_black"
+                        android:textSize="13sp"
+                        app:layout_constraintBottom_toBottomOf="@id/logo5"
+                        app:layout_constraintStart_toStartOf="@id/assetNameTextView5"
+                        app:layout_constraintTop_toBottomOf="@id/assetNameTextView5" />
+
+                    <TextView
+                        android:id="@+id/mNum5"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="15dp"
+                        android:text="-XXXX원"
+                        android:textColor="@color/black"
+                        android:textSize="20sp"
+                        android:textStyle="bold"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintTop_toTopOf="@id/logo5" />
+
+                    <TextView
+                        android:id="@+id/tNum5"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="XXXXXXXXXX원"
+                        android:textColor="@color/light_black"
+                        android:textSize="13sp"
+                        app:layout_constraintBottom_toBottomOf="@id/logo5"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintTop_toBottomOf="@id/assetNameTextView5" />
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+            </LinearLayout>
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </ScrollView>
+</androidx.constraintlayout.widget.ConstraintLayout>

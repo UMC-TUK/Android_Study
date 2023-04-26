@@ -10,4 +10,10 @@
     <color name="light_gray">#FFf3f4f6</color>
     <color name="dark_gray">#FFb2b9c1</color>
     <color name="light_black">#FF737e81</color>
+    <color name="blue">#0992FF</color>
+    <color name="gray_blue">#E1F2FF</color>
+    <color name="red">#FF0000</color>
+    <color name="yellow">#FFFF00</color>
+    <color name="mint">#00FFFF</color>
+    <color name="green">#00FF00</color>
 </resources>

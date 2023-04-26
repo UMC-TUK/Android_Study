@@ -6,7 +6,7 @@
         <Constraint
             android:id="@+id/costButton2"
             android:layout_width="0dp"
-            android:layout_height="150dp"
+            android:layout_height="90dp"
             android:alpha="1"
             android:background="@drawable/cornor_round_top"
             android:backgroundTint="@color/button_clicked"
