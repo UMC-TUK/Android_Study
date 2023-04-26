@@ -1,4 +1,4 @@
-package com.example.chapter3
+package com.example.chapter2_exercise
 
 import android.os.Bundle
 import android.view.LayoutInflater
@@ -6,9 +6,7 @@ import android.view.View
 import android.view.ViewGroup
 import androidx.databinding.DataBindingUtil
 import androidx.fragment.app.Fragment
-import androidx.viewpager2.widget.ViewPager2
-import com.example.chapter3.databinding.ProfileFragmentBinding
-import com.google.android.material.tabs.TabLayout
+import com.example.chapter2_exercise.databinding.ProfileFragmentBinding
 import com.google.android.material.tabs.TabLayoutMediator
 
 class ProfileFragment: Fragment() {

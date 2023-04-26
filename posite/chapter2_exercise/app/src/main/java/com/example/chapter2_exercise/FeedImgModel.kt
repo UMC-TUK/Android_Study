@@ -1,4 +1,4 @@
-package com.example.chapter3
+package com.example.chapter2_exercise
 
 data class FeedImgModel(
     val images: Int

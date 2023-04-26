@@ -1,4 +1,4 @@
-package com.example.chapter3
+package com.example.chapter2_exercise
 
 import android.os.Bundle
 import androidx.fragment.app.Fragment
@@ -9,7 +9,7 @@ import androidx.databinding.DataBindingUtil
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.StaggeredGridLayoutManager
 
-import com.example.chapter3.databinding.FragmentUserReelsBinding
+import com.example.chapter2_exercise.databinding.FragmentUserReelsBinding
 
 
 class UserReelsFragment : Fragment() {
