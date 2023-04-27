@@ -18,13 +18,9 @@ class MainActivity : AppCompatActivity() {
                 try {
                     val result = walletIntent!!.getStringExtra("return")
                     Toast.makeText(applicationContext, result, Toast.LENGTH_SHORT).show()
-
-
                 } catch (e: Exception) {
-
+                    Toast.makeText(applicationContext, e.message, Toast.LENGTH_SHORT).show()
                 }
-
-            } else if (it.resultCode == 1) {
 
             }
         }
