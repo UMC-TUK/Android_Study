@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".SecondActivity">
+
+    <TextView
+        android:id="@+id/receive_text"
+        android:layout_width="100sp"
+        android:layout_height="wrap_content"
+        android:gravity="bottom"
+        android:textColor="@color/black"
+        android:textSize="20sp"
+        android:maxLines="1"
+        android:maxLength="15"
+        android:ellipsize="end"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.051"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.154" />
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/send_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="되돌아가기"
+        android:textColor="@color/black"
+        android:textSize="20sp"
+        app:layout_constraintBottom_toBottomOf="@+id/receive_text"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.101"
+        app:layout_constraintStart_toEndOf="@+id/receive_text"
+        app:layout_constraintTop_toTopOf="@+id/receive_text" />
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/go_third"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="세번째로"
+        android:textColor="@color/black"
+        android:textSize="20sp"
+        app:layout_constraintBottom_toBottomOf="@+id/receive_text"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.467"
+        app:layout_constraintStart_toEndOf="@+id/send_text"
+        app:layout_constraintTop_toTopOf="@+id/receive_text" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
