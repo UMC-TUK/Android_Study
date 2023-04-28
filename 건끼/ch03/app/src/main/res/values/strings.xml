@@ -1,0 +1,18 @@
+<resources>
+    <string name="app_name">ch02</string>
+    <string name="toss_back">토스뱅크</string>
+    <string name="asset">자산</string>
+    <string name="sand_money">송금</string>
+    <string name="invest">투자</string>
+    <string name="cost">소비</string>
+    <string name="history">내역</string>
+    <string name="screen_setting">화면 설정</string>
+    <string name="add_count">자산추가</string>
+    <string name="rule">개인정보처리방침 보기</string>
+    <string name="home">홈</string>
+    <string name="benefit">혜택</string>
+    <string name="toss_pay">토스페이</string>
+    <string name="invest_">주식</string>
+    <string name="all">전체</string>
+    <string name="countId"><u>00은행 XXXXXXXXXXXX</u></string>
+</resources>

@@ -7,7 +7,7 @@
 
         <variable
             name="searchFragViewmodel"
-            type="com.example.chapter3.Viewmodel" />
+            type="com.example.chapter2_exercise.Viewmodel" />
     </data>
 
     <LinearLayout

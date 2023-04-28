@@ -1,0 +1,377 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/light_gray">
+
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/toolbarBenefit"
+        style="?attr/toolbarStyle"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:elevation="0dp"
+        android:fitsSystemWindows="false"
+        android:gravity="center"
+        app:contentInsetEnd="0dp"
+        app:contentInsetStart="0dp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/textBenefit"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="15dp"
+        android:text="@string/benefit"
+        android:textColor="@color/black"
+        android:textSize="30sp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/toolbarBenefit" />
+
+    <TextView
+        android:id="@+id/point"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="10dp"
+        android:drawableStart="@drawable/ic_baseline_monetization_on_24"
+        android:drawablePadding="5dp"
+        android:drawableTint="@color/blue"
+        android:text="60원"
+        android:textColor="@color/light_black"
+        android:textSize="20sp"
+        app:layout_constraintTop_toBottomOf="@id/toolbarBenefit"
+        app:layout_constraintEnd_toStartOf="@id/arrow"
+        />
+
+    <ImageView
+        android:id="@+id/arrow"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="20dp"
+        android:src="@drawable/ic_baseline_arrow_forward_ios_24"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/toolbarBenefit" />
+
+    <ScrollView
+        android:id="@+id/benefitLinear"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/textBenefit">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="15dp"
+                android:layout_marginTop="15dp"
+                android:background="@drawable/cornor_round"
+                android:backgroundTint="@color/button_clicked_light_gray"
+                android:clickable="true"
+                android:focusable="true"
+                android:paddingHorizontal="15dp"
+                android:paddingVertical="10dp">
+
+                <View
+                    android:id="@+id/img"
+                    android:layout_width="50dp"
+                    android:layout_height="50dp"
+                    android:layout_margin="5dp"
+                    android:background="@drawable/circle"
+                    android:backgroundTint="@color/blue"
+                    android:scaleType="centerCrop"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <TextView
+                    android:id="@+id/title"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="15dp"
+                    android:text="친구와 함께 토스 켜"
+                    android:textColor="@color/light_black"
+                    android:textSize="16sp"
+                    app:layout_constraintStart_toEndOf="@id/img"
+                    app:layout_constraintTop_toTopOf="@id/img" />
+
+                <TextView
+                    android:id="@+id/subTitle"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="포인트 받기"
+                    android:textColor="@color/blue"
+                    android:textSize="18sp"
+                    android:textStyle="bold"
+                    app:layout_constraintBottom_toBottomOf="@id/img"
+                    app:layout_constraintStart_toStartOf="@id/title"
+                    app:layout_constraintTop_toBottomOf="@id/title" />
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="15dp"
+                android:layout_marginTop="15dp"
+                android:background="@drawable/cornor_round"
+                android:backgroundTint="@color/button_clicked_light_gray"
+                android:clickable="true"
+                android:focusable="true"
+                android:paddingHorizontal="15dp"
+                android:paddingVertical="10dp">
+
+                <View
+                    android:id="@+id/img2"
+                    android:layout_width="50dp"
+                    android:layout_height="50dp"
+                    android:layout_margin="5dp"
+                    android:background="@drawable/circle"
+                    android:backgroundTint="@color/green"
+                    android:scaleType="centerCrop"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <TextView
+                    android:id="@+id/title2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="15dp"
+                    android:text="이번 주 미션하면"
+                    android:textColor="@color/light_black"
+                    android:textSize="16sp"
+                    app:layout_constraintStart_toEndOf="@id/img2"
+                    app:layout_constraintTop_toTopOf="@id/img2" />
+
+                <TextView
+                    android:id="@+id/subTitle2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="얼마 받을지 보기"
+                    android:textColor="@color/blue"
+                    android:textSize="18sp"
+                    android:textStyle="bold"
+                    app:layout_constraintBottom_toBottomOf="@id/img2"
+                    app:layout_constraintStart_toStartOf="@id/title2"
+                    app:layout_constraintTop_toBottomOf="@id/title2" />
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="15dp"
+                android:layout_marginTop="15dp"
+                android:background="@drawable/cornor_round"
+                android:backgroundTint="@color/button_clicked_light_gray"
+                android:clickable="true"
+                android:focusable="true"
+                android:paddingHorizontal="15dp"
+                android:paddingVertical="10dp">
+
+                <View
+                    android:id="@+id/img3"
+                    android:layout_width="50dp"
+                    android:layout_height="50dp"
+                    android:layout_margin="5dp"
+                    android:background="@drawable/circle"
+                    android:backgroundTint="@color/yellow"
+                    android:scaleType="centerCrop"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <TextView
+                    android:id="@+id/title3"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="15dp"
+                    android:text="라이브 쇼핑 보고"
+                    android:textColor="@color/light_black"
+                    android:textSize="16sp"
+                    app:layout_constraintStart_toEndOf="@id/img3"
+                    app:layout_constraintTop_toTopOf="@id/img3" />
+
+                <TextView
+                    android:id="@+id/subTitle3"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="포인트 받기"
+                    android:textColor="@color/blue"
+                    android:textSize="18sp"
+                    android:textStyle="bold"
+                    app:layout_constraintBottom_toBottomOf="@id/img3"
+                    app:layout_constraintStart_toStartOf="@id/title3"
+                    app:layout_constraintTop_toBottomOf="@id/title3" />
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="15dp"
+                android:layout_marginTop="15dp"
+                android:background="@drawable/cornor_round"
+                android:backgroundTint="@color/button_clicked_light_gray"
+                android:clickable="true"
+                android:focusable="true"
+                android:paddingHorizontal="15dp"
+                android:paddingVertical="10dp">
+
+                <View
+                    android:id="@+id/img4"
+                    android:layout_width="50dp"
+                    android:layout_height="50dp"
+                    android:layout_margin="5dp"
+                    android:background="@drawable/circle"
+                    android:backgroundTint="@color/red"
+                    android:scaleType="centerCrop"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <TextView
+                    android:id="@+id/title4"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="15dp"
+                    android:text="행운 퀴즈 종료"
+                    android:textColor="@color/light_black"
+                    android:textSize="16sp"
+                    app:layout_constraintStart_toEndOf="@id/img4"
+                    app:layout_constraintTop_toTopOf="@id/img4" />
+
+                <TextView
+                    android:id="@+id/subTitle4"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="추가 혜택 보기"
+                    android:textColor="@color/blue"
+                    android:textSize="18sp"
+                    android:textStyle="bold"
+                    app:layout_constraintBottom_toBottomOf="@id/img4"
+                    app:layout_constraintStart_toStartOf="@id/title4"
+                    app:layout_constraintTop_toBottomOf="@id/title4" />
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="15dp"
+                android:layout_marginTop="15dp"
+                android:background="@drawable/cornor_round"
+                android:backgroundTint="@color/button_clicked_light_gray"
+                android:clickable="true"
+                android:focusable="true"
+                android:paddingHorizontal="15dp"
+                android:paddingVertical="10dp">
+
+                <View
+                    android:id="@+id/img5"
+                    android:layout_width="50dp"
+                    android:layout_height="50dp"
+                    android:layout_margin="5dp"
+                    android:background="@drawable/circle"
+                    android:backgroundTint="@color/blue"
+                    android:scaleType="centerCrop"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <TextView
+                    android:id="@+id/title5"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="15dp"
+                    android:text="머니 알림 받고"
+                    android:textColor="@color/light_black"
+                    android:textSize="16sp"
+                    app:layout_constraintStart_toEndOf="@id/img5"
+                    app:layout_constraintTop_toTopOf="@id/img5" />
+
+                <TextView
+                    android:id="@+id/subTitle5"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="20원 받기"
+                    android:textColor="@color/blue"
+                    android:textSize="18sp"
+                    android:textStyle="bold"
+                    app:layout_constraintBottom_toBottomOf="@id/img5"
+                    app:layout_constraintStart_toStartOf="@id/title5"
+                    app:layout_constraintTop_toBottomOf="@id/title5" />
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="15dp"
+                android:layout_marginTop="15dp"
+                android:background="@drawable/cornor_round"
+                android:backgroundTint="@color/button_clicked_light_gray"
+                android:clickable="true"
+                android:focusable="true"
+                android:paddingHorizontal="15dp"
+                android:paddingVertical="10dp">
+
+                <View
+                    android:id="@+id/img6"
+                    android:layout_width="50dp"
+                    android:layout_height="50dp"
+                    android:layout_margin="5dp"
+                    android:background="@drawable/circle"
+                    android:backgroundTint="@color/green"
+                    android:scaleType="centerCrop"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <TextView
+                    android:id="@+id/title6"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="15dp"
+                    android:text="만보기"
+                    android:textColor="@color/light_black"
+                    android:textSize="16sp"
+                    app:layout_constraintStart_toEndOf="@id/img6"
+                    app:layout_constraintTop_toTopOf="@id/img6" />
+
+                <TextView
+                    android:id="@+id/subTitle6"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="140원 받기"
+                    android:textColor="@color/blue"
+                    android:textSize="18sp"
+                    android:textStyle="bold"
+                    app:layout_constraintBottom_toBottomOf="@id/img6"
+                    app:layout_constraintStart_toStartOf="@id/title6"
+                    app:layout_constraintTop_toBottomOf="@id/title6" />
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+        </LinearLayout>
+    </ScrollView>
+</androidx.constraintlayout.widget.ConstraintLayout>
