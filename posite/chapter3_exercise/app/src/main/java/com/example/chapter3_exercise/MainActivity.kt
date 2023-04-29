@@ -1,4 +1,4 @@
-package com.example.chapter3
+package com.example.chapter3_exercise
 
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
@@ -6,8 +6,7 @@ import android.os.Bundle
 import android.widget.Toast
 import androidx.activity.result.ActivityResultLauncher
 import androidx.activity.result.contract.ActivityResultContracts
-import com.example.chapter3.databinding.ActivityMainBinding
-import com.google.android.material.tabs.TabLayoutMediator
+import com.example.chapter3_exercise.databinding.ActivityMainBinding
 
 class MainActivity : AppCompatActivity() {
     private lateinit var binding: ActivityMainBinding
@@ -29,15 +28,9 @@ class MainActivity : AppCompatActivity() {
         binding = ActivityMainBinding.inflate(layoutInflater)
         setContentView(binding.root)
 
-        binding.userContent.adapter = FragmentAdapter(this)
-        binding.userContent.isUserInputEnabled = true
-        val tabs = arrayOf(R.drawable.baseline_looks_one_24, R.drawable.baseline_looks_two_24)
-        TabLayoutMediator(binding.userTab, binding.userContent) { tab, position ->
-            tab.setIcon(tabs[position])
-        }.attach()
-        binding.goSecond.setOnClickListener {
+        binding.sendText.setOnClickListener {
             val intent = Intent(applicationContext, SecondActivity::class.java)
-            intent.putExtra("text", binding.goSecond.text.toString())
+            intent.putExtra("text", binding.inputText.text.toString())
             activityResultLauncher.launch(intent)
         }
     }
