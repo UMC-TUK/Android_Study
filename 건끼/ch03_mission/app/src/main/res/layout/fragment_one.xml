@@ -1,18 +1,23 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
     android:orientation="vertical"
-    android:gravity="center"
-    tools:context=".TwoActivity">
+    android:layout_height="match_parent">
 
     <TextView
-        android:id="@+id/textView"
-        android:text="받은 Text"
-        android:textSize="20sp"
-        android:layout_width="wrap_content"
+        android:text="fragment 1"
+        android:gravity="center"
+        android:textSize="30sp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"/>
+
+
+    <EditText
+        android:id="@+id/edit"
+        android:hint="EditText"
+        android:maxLines="1"
+        android:ellipsize="start"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"/>
 
     <Button
@@ -20,5 +25,4 @@
         android:text="Three Activity"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"/>
-
 </LinearLayout>
