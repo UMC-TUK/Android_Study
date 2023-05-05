@@ -7,9 +7,7 @@ import android.os.Bundle
 import android.os.Handler
 import android.os.Looper
 import android.util.Log
-import android.view.LayoutInflater
-import android.view.View
-import android.view.WindowManager
+import android.view.*
 import android.widget.PopupWindow
 import androidx.activity.result.ActivityResultLauncher
 import androidx.activity.result.contract.ActivityResultContracts
@@ -22,6 +20,7 @@ import com.example.chapter5_exercise.databinding.ActivityMainBinding
 class MainActivity : AppCompatActivity() {
     private lateinit var binding: ActivityMainBinding
     private var memoArray = ArrayList<MemoModel>()
+    private var trashArray = ArrayList<MemoModel>()
     private var count = 0
     private lateinit var memoListAdapter: MemoListAdapter
 
@@ -54,7 +53,6 @@ class MainActivity : AppCompatActivity() {
         binding = ActivityMainBinding.inflate(layoutInflater)
         setContentView(binding.root)
 
-
         val popupView = LayoutInflater.from(this).inflate(R.layout.fab_description, null)
         val popup = PopupWindow(
             popupView,
@@ -65,13 +63,13 @@ class MainActivity : AppCompatActivity() {
             elevation = 10f
         }
 
-        binding.floatingBtn.setOnClickListener {
+        binding.floatingWriteBtn.setOnClickListener {
             val intent = Intent(applicationContext, MemoActivity::class.java)
             activityResultLauncher.launch(intent)
         }
 
-        binding.floatingBtn.setOnLongClickListener {
-            popup.showAsDropDown(binding.floatingBtn, -100, -(binding.floatingBtn.height+150))
+        binding.floatingWriteBtn.setOnLongClickListener {
+            popup.showAsDropDown(binding.floatingWriteBtn, -100, -(binding.floatingWriteBtn.height+150))
             Handler(Looper.getMainLooper()).postDelayed({
                 if (popup.isShowing) {
                     popup.dismiss()
@@ -79,6 +77,7 @@ class MainActivity : AppCompatActivity() {
             }, 3000)
             true
         }
+
     }
 
     override fun onNewIntent(intent: Intent?) {
@@ -111,7 +110,7 @@ class MainActivity : AppCompatActivity() {
         if (count == 0) {
             Log.d("init", "init recycler")
             val gridLayoutManager = GridLayoutManager(applicationContext, 3)
-            memoListAdapter = MemoListAdapter(memoArray, applicationContext)
+            memoListAdapter = MemoListAdapter(memoArray, applicationContext, trashArray)
             binding.memoList.layoutManager = gridLayoutManager
             binding.memoList.adapter = memoListAdapter
             binding.memoList.visibility = View.VISIBLE
@@ -122,4 +121,6 @@ class MainActivity : AppCompatActivity() {
         count++
 
     }
+
+
 }

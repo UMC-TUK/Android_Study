@@ -6,9 +6,8 @@ import android.content.Intent
 import android.content.Intent.FLAG_ACTIVITY_NEW_TASK
 import android.os.Build
 import android.util.Log
-import android.view.LayoutInflater
-import android.view.View
-import android.view.ViewGroup
+import android.util.TypedValue
+import android.view.*
 import android.widget.Toast
 import androidx.annotation.RequiresApi
 import androidx.recyclerview.widget.RecyclerView
@@ -16,7 +15,8 @@ import com.example.chapter5_exercise.databinding.MemoListBinding
 import java.time.LocalDateTime
 import java.time.format.DateTimeFormatter
 
-data class MemoListAdapter(private val datas: ArrayList<MemoModel>, private val context: Context) : RecyclerView.Adapter<MemoListAdapter.ViewHolder>() {
+data class MemoListAdapter(private val datas: ArrayList<MemoModel>, private val context: Context, private val bins: ArrayList<MemoModel>)
+    : RecyclerView.Adapter<MemoListAdapter.ViewHolder>(){
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ViewHolder {
         Log.d("memo1", datas.toString())
@@ -25,15 +25,20 @@ data class MemoListAdapter(private val datas: ArrayList<MemoModel>, private val 
     }
     override fun getItemCount(): Int = datas.size
 
+
     fun addItem(item: MemoModel) {
         datas.add(0, item) // 새 아이템을 리스트의 맨 앞에 추가
         notifyItemInserted(0) // RecyclerView에 아이템 추가 알림
     }
     //리사이클러 뷰의 요소들을 넣어줌
-    inner class ViewHolder(private val binding: MemoListBinding)  : RecyclerView.ViewHolder(binding.root) {
-
+    inner class ViewHolder(private val binding: MemoListBinding)  : RecyclerView.ViewHolder(binding.root), View.OnCreateContextMenuListener {
+        init {
+            binding.memoContent.setOnCreateContextMenuListener(this)
+        }
+        private var current = 0
         @RequiresApi(Build.VERSION_CODES.O)
-        fun bind(data1: MemoModel) {
+        fun bind(data1: MemoModel, currentPosition: Int) {
+            current = currentPosition
             val dateSplit = data1.date.split(":")
             data1.title?.let {
                 if(it.isBlank()){
@@ -61,12 +66,37 @@ data class MemoListAdapter(private val datas: ArrayList<MemoModel>, private val 
                 }.run{context.startActivity(this)}
             }
 
+
+
+        }
+
+        override fun onCreateContextMenu(
+            menu: ContextMenu?,
+            v: View?,
+            menuInfo: ContextMenu.ContextMenuInfo?
+        ) {
+            val inflater = MenuInflater(v?.context)
+            // 컨텍스트 메뉴 레이아웃을 인플레이트
+            inflater.inflate(R.menu.context, menu)
+            menu?.findItem(R.id.action_bin)?.setOnMenuItemClickListener {
+                deleteItem(current)
+                notifyDataSetChanged()
+                true
+            }
         }
     }
 
     @RequiresApi(Build.VERSION_CODES.O)
     override fun onBindViewHolder(holder: ViewHolder, position: Int) {
-        holder.bind(datas[position])
+        holder.bind(datas[position], position)
+    }
+
+
+    fun deleteItem(position: Int) {
+        bins.add(datas[position])
+        datas.removeAt(position)
+        Log.d("memo1", "bins: $bins")
+        notifyItemRemoved(position)
     }
 
 }
