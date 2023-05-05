@@ -1,0 +1,12 @@
+<resources>
+    <string name="app_name">umc_android_chapter5</string>
+    <string name="app_context">umc 5주차 워크북 실습 화면입니다.\n리스트 뷰와 다르게 성능이 안정적이랍니다.\n우분투 키보드가 또 난리네요.\n분명 다른 곳에서는 괜찮은데 유독 최근에 안드로이드 스튜디오에서 난리입니다.\nibus문제는 아닌 것 같네요.</string>
+    <string name="kotlin_title">코틀린 공식문서 탐방기</string>
+    <string name="kotiln_context">코틀린 공식 문서 한글 버전을 얻었다. 공식가이드라는데 과연 얼마나 자세한 내용이 담겨져있을지</string>
+    <string name="toss">[기업 정보] 토스</string>
+    <string name="toss_context">Toss는 대한민국의 스타트업인 비바 리퍼블리카가 개발한 송금 서비스 앱이다. \n이 앱은 공인인증서나 보안 매체 없이 앱을 통해 빠르고 손쉽게 송금이 가능하도록 만들었다.</string>
+    <string name="umc_chapter2_title">umc 2챕터 계획</string>
+    <string name="umc_chapter2_context">안드로이드 폰이 없어서 아이폰으로 캡처했다. 중고폰이라도 장만해야지.\n</string>
+    <string name="ubuntu_title">드디어 우분투에서 카카오톡을 설치했다! With bottle</string>
+    <string name="ubuntu_context">wine의 dependency가 엉망이 되어 헤매기를 어언 몇개월...\n bottle이라는 새로운 wine 파생을 알아냈다!\n게임에 특화된 wine이라는데 사실 게임은 상관없고 카카오톡만 돌아가면 된다.</string>
+</resources>
