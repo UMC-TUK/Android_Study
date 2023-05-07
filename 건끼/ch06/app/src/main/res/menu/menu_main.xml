@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item android:id="@+id/one"
+        android:icon="@drawable/baseline_circle_24"
+        android:title="one" />
+
+    <item android:id="@+id/two"
+        android:icon="@drawable/baseline_rectangle_24"
+        android:title="two"/>
+    <item android:id="@+id/three"
+        android:icon="@drawable/baseline_change_history_24"
+        android:title="three"/>
+</menu>
