@@ -6,9 +6,9 @@ import androidx.recyclerview.widget.RecyclerView
 import com.example.chapter6_exercise.databinding.ImgListBinding
 
 class ImgAdapter (private val imgList: ArrayList<Int>) : RecyclerView.Adapter<ImgAdapter.ViewHolder>() {
-
+    lateinit var binding:ImgListBinding
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ViewHolder {
-        val binding = ImgListBinding.inflate(LayoutInflater.from(parent.context), parent, false)
+        binding = ImgListBinding.inflate(LayoutInflater.from(parent.context), parent, false)
         return ViewHolder(binding)
     }
     override fun getItemCount(): Int = imgList.size
@@ -22,13 +22,7 @@ class ImgAdapter (private val imgList: ArrayList<Int>) : RecyclerView.Adapter<Im
     }
 
     override fun onBindViewHolder(holder: ViewHolder, position: Int) {
-        holder.bind(imgList[position])
-    }
-    override fun getItemId(position: Int): Long {
-        return super.getItemId(position)
-    }
-    override fun getItemViewType(position: Int): Int {
-        return position
+        holder.bind(imgList[position % imgList.size])
     }
 
 }
