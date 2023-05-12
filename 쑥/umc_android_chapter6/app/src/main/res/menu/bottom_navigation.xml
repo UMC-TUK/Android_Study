@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item
+        android:id="@+id/menu_today"
+        android:title="Today"
+        android:icon="@drawable/calendar"/>
+    <item
+        android:id="@+id/menu_home"
+        android:title="Home"
+        android:icon="@drawable/home"/>
+    <item
+        android:id="@+id/menu_mypage"
+        android:title="MyPage"
+        android:icon="@drawable/mypage"/>
+    <item
+        android:id="@+id/menu_setting"
+        android:title="Setting"
+        android:icon="@drawable/setting"/>
+
+
+</menu>
