@@ -27,7 +27,7 @@ class PlantFragment : Fragment() {
 
         binding.plantViewPager.adapter = adapter
 
-        val tabName = arrayOf<String>("Flower", "Tree")
+        val tabName = arrayOf<String>("Flower", "Tree", "Grass")
 
         TabLayoutMediator(binding.tabLayout, binding.plantViewPager) {tab, position ->
             tab.text = tabName[position]
