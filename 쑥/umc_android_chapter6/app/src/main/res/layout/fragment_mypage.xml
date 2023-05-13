@@ -105,7 +105,8 @@
             app:layout_constraintTop_toTopOf="parent"
             app:tabIndicator="@null"
             app:tabPaddingEnd="-1dp"
-            app:tabPaddingStart="-1dp" />
+            app:tabPaddingStart="-1dp"
+            app:tabGravity="fill"/>
 
         <androidx.viewpager2.widget.ViewPager2
             android:id="@+id/viewPager"

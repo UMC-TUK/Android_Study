@@ -9,6 +9,7 @@ import com.google.android.material.tabs.TabLayoutMediator
 import com.study.umc_android_chapter6.adapter.ViewPagerAdapter
 import com.study.umc_android_chapter6.databinding.FragmentMypageBinding
 import com.study.umc_android_chapter6.databinding.TabView2Binding
+import com.study.umc_android_chapter6.databinding.TabView3Binding
 import com.study.umc_android_chapter6.databinding.TabViewBinding
 
 class MypageFragment : Fragment() {
@@ -34,8 +35,11 @@ class MypageFragment : Fragment() {
                 0 -> {
                     tab.customView = TabViewBinding.inflate(layoutInflater).tabTitle
                 }
-                else -> {
+                1 -> {
                     tab.customView = TabView2Binding.inflate(layoutInflater).tabTitle
+                }
+                2 -> {
+                    tab.customView = TabView3Binding.inflate(layoutInflater).tabTitle
                 }
             }
         }.attach()

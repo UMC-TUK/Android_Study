@@ -3,7 +3,7 @@
     <string name="home">홈</string>
     <string name="ad">이건 광고입니다\n네이버 광고일겁니다</string>
     <string name="app_context">그래도 첫 번째 아이템이니까 정성이 있어야 겠죠. 우분투 버그는 아직 못잡았지만 한글영어한글변환을 거치면 피할 수 있다는 걸 알아냈습니다.</string>
-    <string name="today">오늘 날짜</string>
+    <string name="today">오늘</string>
     <string name="setting">설정</string>
     <string name="mypage">마이페이지</string>
     <string name="icon_copyright"><a href="https://www.flaticon.com/kr/free-icons/" title=" 아이콘"> 아이콘  제작자: Smashicons - Flaticon</a></string>
