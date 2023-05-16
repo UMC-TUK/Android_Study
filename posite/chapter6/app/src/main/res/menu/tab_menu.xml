@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <item
+        android:id="@+id/circle_one"
+        android:icon="@drawable/circle1"
+        android:title="1"
+        app:showAsAction="ifRoom" />
+
+    <item
+        android:id="@+id/circle_two"
+        android:icon="@drawable/circle2"
+        android:title="2"
+        app:showAsAction="ifRoom" />
+
+    <item
+        android:id="@+id/circle_trhee"
+        android:icon="@drawable/circle3"
+        android:title="3"
+        app:showAsAction="ifRoom" />
+
+    <item
+        android:id="@+id/circle_four"
+        android:icon="@drawable/circle4"
+        android:title="4"
+        app:showAsAction="ifRoom" />
+
+</menu>
