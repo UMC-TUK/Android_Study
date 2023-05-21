@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity"
+    android:padding="10dp">
+
+    <ImageView
+        android:id="@+id/image"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:paddingHorizontal="40dp"
+        android:paddingTop="100dp"
+        android:paddingBottom="100dp"
+        android:src="@color/cardview_dark_background"
+        app:layout_constraintBottom_toTopOf="@+id/time"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/time"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="28dp"
+        android:text="00:00"
+        android:textSize="15dp"
+        app:layout_constraintBottom_toBottomOf="@+id/image"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/seekBar" />
+
+    <SeekBar
+        android:id="@+id/seekBar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:progressDrawable="@drawable/seekbar"
+        android:thumb="@drawable/seekbar"
+        app:layout_constraintTop_toBottomOf="@id/time"
+        app:layout_constraintBottom_toTopOf="@id/button_layout"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <LinearLayout
+        android:id="@+id/button_layout"
+        android:layout_width="match_parent"
+        android:layout_height="150dp"
+        android:gravity="center"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/seekBar"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent">
+
+
+        <ImageView
+            android:id="@+id/start"
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            android:src="@drawable/start"
+            android:layout_marginEnd="30dp"
+            />
+        <ImageView
+            android:id="@+id/play"
+            android:layout_width="45dp"
+            android:layout_height="45dp"
+            android:src="@drawable/play"
+            android:layout_marginEnd="30dp"
+            />
+        <ImageView
+            android:id="@+id/stop"
+            android:layout_width="45dp"
+            android:layout_height="45dp"
+            android:src="@drawable/stop"
+            android:layout_marginEnd="30dp"
+            />
+        <ImageView
+            android:id="@+id/end"
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            android:src="@drawable/end"
+            />
+
+    </LinearLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
