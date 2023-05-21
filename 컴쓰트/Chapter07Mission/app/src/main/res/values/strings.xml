@@ -1,0 +1,5 @@
+<resources>
+    <string name="app_name">Chapter07Mission</string>
+    <string name="btn_pause">정지</string>
+    <string name="btn_start">시작</string>
+</resources>
