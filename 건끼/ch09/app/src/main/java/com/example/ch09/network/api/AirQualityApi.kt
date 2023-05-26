@@ -11,7 +11,7 @@ interface AirQualityApi {
 
     @GET(
         "B552584/MsrstnInfoInqireSvc/getNearbyMsrstnList" +
-                "?serviceKey=T1VSUJxffGwYXUzQ6C0V%2B0r6G1s4i3kYka%2FofmYKhyQ%2BmnzlTSH%2FeBLxvIpaAEUuBwO1q4uFHKXGu1QsggC%2BFw%3D%3D" +
+                "?serviceKey=${BuildConfig.AIR_KOREA_API_KEY}" +
                 "&returnType=json"
     )
      suspend fun getNearbyMonitoringStation(
