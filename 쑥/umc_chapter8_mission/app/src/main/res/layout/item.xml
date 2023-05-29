@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:padding="8dp"
+    android:id="@+id/item">
+
+
+    <TextView
+        android:id="@+id/item_title"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        style="@style/ItemTitle"
+        app:layout_constraintEnd_toStartOf="@+id/item_switch"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/item_context"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        style="@style/ItemContext"
+        app:layout_constraintEnd_toStartOf="@+id/item_switch"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/item_title" />
+
+    <Switch
+        android:id="@+id/item_switch"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="8dp"
+        android:paddingStart="8dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.175" />
+
+    <ToggleButton
+        android:id="@+id/item_like"
+        android:layout_width="25dp"
+        android:layout_height="25dp"
+        android:layout_marginTop="12dp"
+        android:layout_marginEnd="16dp"
+        android:background="@drawable/likeimage"
+        android:backgroundTint="@color/pink"
+        android:textOff=" "
+        android:textOn=" "
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/item_switch" />
+
+    <ToggleButton
+        android:id="@+id/item_bookmark"
+        android:layout_width="25dp"
+        android:layout_height="25dp"
+        android:layout_marginTop="12dp"
+        android:layout_marginEnd="4dp"
+        android:background="@drawable/bookmarkimage"
+        android:backgroundTint="@color/yellow"
+        android:textOff=" "
+        android:textOn=" "
+        app:layout_constraintEnd_toStartOf="@+id/item_like"
+        app:layout_constraintTop_toBottomOf="@+id/item_switch" />
+</androidx.constraintlayout.widget.ConstraintLayout>
