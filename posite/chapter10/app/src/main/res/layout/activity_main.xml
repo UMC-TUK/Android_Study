@@ -10,9 +10,20 @@
     <View
         android:layout_width="match_parent"
         android:layout_height="0dp"
-        android:layout_weight="4.2"/>
+        android:layout_weight="3.8"/>
 
 
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/button_kakao_login"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="0.35"
+        android:background="#ffcc00"
+        android:text="카카오로그인" />
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="0.05"/>
     <androidx.appcompat.widget.AppCompatButton
         android:id="@+id/go_auth"
         android:layout_width="match_parent"

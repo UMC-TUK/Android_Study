@@ -1,3 +1,5 @@
 <resources>
     <string name="app_name">chapter10</string>
+    <string name="native_app_key">8eb469370f02128498f483cfd0819d18</string>
+    <string name="kakao_redirect">kakao8eb469370f02128498f483cfd0819d18</string>
 </resources>
