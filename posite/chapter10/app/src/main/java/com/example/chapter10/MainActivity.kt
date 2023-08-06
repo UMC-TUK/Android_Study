@@ -8,6 +8,7 @@ import androidx.appcompat.app.AppCompatActivity
 import androidx.lifecycle.lifecycleScope
 import com.example.chapter10.api.APIRepository
 import com.example.chapter10.databinding.ActivityMainBinding
+import com.kakao.sdk.auth.model.OAuthToken
 import com.kakao.sdk.common.KakaoSdk
 import com.kakao.sdk.common.model.ClientError
 import com.kakao.sdk.common.model.ClientErrorCause
@@ -38,6 +39,7 @@ class MainActivity : AppCompatActivity() {
                     // 서비스 코드에서는 간단하게 로그인 요청하고 oAuthToken 을 받아올 수 있다.
                     val oAuthToken = UserApiClient.loginWithKakao(applicationContext)
                     Log.d("MainActivity", "beanbean > $oAuthToken")
+                    Log.d("token", "access: ${oAuthToken.accessToken}")
                     UserApiClient.instance.accessTokenInfo { tokenInfo, error ->
                         if (error != null) {
                             Log.e("user", "토큰 정보 보기 실패", error)
